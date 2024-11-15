@@ -42,8 +42,7 @@ Make sure you have the following installed:
 1. Clone this repository
 
    ```
-   git clone <repository-url>
-   cd vehicle-api
+   git clone https://github.com/jackgrodnick/apollo.git
    ```
 
 2. Install the dependencies
