@@ -2,7 +2,7 @@
 
 # Notes, Acknowledgments, and what I Learned:
 
-I have never built an API, and it has been a while since my last time using Node.js or Express. I quickly learned, however, that this process is very similar to React projects I have done in the past. The only difference is that instead of sending components to the client, we just send JSON. During this process, my biggest issue was remembering all the syntax. I would like to acknowledge these YouTube videos that helped me refresh before I attempted this project:
+I have never built an API, so this was a super cool project to tackle. I quickly learned, however, that making this API is very similar to React projects I have done in the past. The only difference is that instead of sending components to the client, we send JSON. During this process, my biggest issue was remembering all the syntax and how to get started. It has been a while since my last time using Node.js or Express. I want to acknowledge these YouTube videos that helped me refresh before I attempted this project:
 
 - https://www.youtube.com/watch?v=ldYcgPKEZC8 (showed me the pipeline for API creation)
 - https://www.youtube.com/watch?v=T2sYitv2OAY (showed me how to test my API using Jest and Supertest)
