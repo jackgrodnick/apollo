@@ -1,8 +1,8 @@
 # Apollo Superday Vehicle API Service Project!
 
-# Notes, Acknowledgments, and what I Learned:
+# Notes, Acknowledgments, and What I Learned:
 
-This was a super cool project to tackle! I started this task off unsure of how to even begin, but I quickly learned that making this API is very similar to past React projects I've done. During this process, my biggest challenge was remembering all the syntax and figuring out how to get started, as it had been a while since I last used Node.js or Express. I want to acknowledge these YouTube videos that helped me refresh before I attempted this project:
+This was a super cool project to tackle! I started this task off unsure of how to begin, but I quickly learned that making this API is very similar to past React and static web projects I've done. The only difference is that instead of serving up static web content, we sent just JSON instead. During this process, my biggest challenge was remembering all the syntax and figuring out how to get started, as it has been a while since I last used Node.js or Express. I want to acknowledge these YouTube videos that helped me refresh before I attempted this project:
 
 - https://www.youtube.com/watch?v=ldYcgPKEZC8 (review of the pipeline for API creation)
 - https://www.youtube.com/watch?v=T2sYitv2OAY (showed me how to test my API using Jest and Supertest)

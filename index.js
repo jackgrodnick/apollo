@@ -7,7 +7,7 @@ const PORT = 3000
 // MIDDLEWARE
 
 
-app.use(express.json()); // Parses req object to JSON format
+app.use(express.json()); // Parses req body object to JSON format
 
 
 // Checks to make sure that JSON is being sent from the client, else it sends a 400 error
