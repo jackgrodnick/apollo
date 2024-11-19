@@ -161,6 +161,18 @@ describe('Test all Vehicle API Endpoints', () => {
 
   });
 
+    // Ninth: client sends invalid data test
+    it('return 422 for invalid data multi test', async () => {
+      const response = await request(app).post('/vehicle').send(testData[0]);
+
+      const response = await request(app).post('/soldv').send(testData[0]);
+  
+      const response2 = await request(app).get('/getsoldvehicles').send(invalidData2);
+      
+      expect(response2.statusCode).toBe(422);
+  
+    });
+
   // Tenth: Test for client sending invalid JSON format
   it('return 400 for invalid JSON format', async () => {
     const response = await request(app)

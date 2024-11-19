@@ -47,12 +47,12 @@ app.get('/vehicle', async (req, res) => {
 
 // Creates a new vehicle
 app.post('/vehicle', validateData, async (req, res) => {
-    const { vin, manufacturer, description, horse_power, model_name, model_year, purchase_price, fuel_type } = req.body;
+    const { vin, manufacturer, description, horse_power, model_name, model_year, purchase_price, fuel_type, color, type } = req.body;
     try {
       const result = await pool.query(
-        `INSERT INTO vehicles (vin, manufacturer, description, horse_power, model_name, model_year, purchase_price, fuel_type)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`,
-        [vin, manufacturer, description, horse_power, model_name, model_year, purchase_price, fuel_type]
+        `INSERT INTO vehicles (vin, manufacturer, description, horse_power, model_name, model_year, purchase_price, fuel_type, color, type_car)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *`,
+        [vin, manufacturer, description, horse_power, model_name, model_year, purchase_price, fuel_type, color, type]
       );
       res.status(201).json(result.rows[0]);
     } catch (err) {
@@ -70,6 +70,23 @@ app.get('/vehicle/:vin', async (req, res) => {
         return res.status(404).json({ error: 'Vehicle not found' });
       }
       res.status(200).json(result.rows[0]);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+});
+
+// Gets vehicle by VIN
+app.get('/getsoldvehicles', async (req, res) => {
+    try {
+      const result1 = await pool.query('SELECT * FROM soldCars');
+      info = []
+      for (let len = 0; len < rows.length; len++ ) {
+        const result = await pool.query('SELECT * FROM vehicles WHERE vin = $1', [rows[len].vin]);
+        if (result.rows.length > 0) {
+            info += result.rows[0]
+        }
+      }
+      res.status(200).json(info);
     } catch (err) {
       res.status(500).json({ error: err.message });
     }

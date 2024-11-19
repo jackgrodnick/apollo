@@ -13,5 +13,16 @@ CREATE TABLE vehicles (
   model_name TEXT, 
   model_year INTEGER,
   purchase_price DECIMAL,
-  fuel_type TEXT
+  fuel_type TEXT,
+  color TEXT,
+  type_car TEXT
+);
+
+
+-- Table I made to hold the assignments specified values for vehicles
+CREATE TABLE soldCars (
+  vin TEXT PRIMARY KEY, -- Ensures unique none NULL vins are inserted
+  buyer TEXT,
+  seller TEXT,
+  sellPrice DECIMAL
 );
